@@ -1,0 +1,283 @@
+h1{
+    font-size: 96px;
+    line-height: 106px;
+}
+
+h2{
+    font-size: 54px;
+    line-height: 64px;
+}
+
+h3{
+    font-size: 48px;
+    line-height: 56px;
+}
+
+h4{
+    font-size: 32px;
+    line-height: 46px;
+}
+
+h5{
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h6,
+p,
+.button{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.list-menu,
+form input[type=text],
+form textarea{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.wrapper-link_soth_seti span{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@media (max-width:1720px) {
+    h1{
+        font-size: 86px;
+        line-height: 96px;
+    }
+    
+    h2{
+        font-size: 48px;
+        line-height: 58px;
+    }
+    
+    h3{
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    h4{
+        font-size: 28px;
+        line-height: 42px;
+    }
+    
+    h6,
+    p,
+    .button{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .list-menu{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    h5{
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width:1600px) {
+    h1{
+        font-size: 76px;
+        line-height: 86px;
+    }
+    
+    h2{
+        font-size: 44px;
+        line-height: 50px;
+    }
+    
+    h3{
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    h4{
+        font-size: 24px;
+        line-height: 38px;
+    }
+
+    h5{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    h6,
+    p,
+    .button{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .list-menu{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+        form input[type=text],
+        form textarea {
+            font-size: 14px;
+            line-height: 18px;
+        }
+}
+
+@media (max-width:1440px) {
+    h1{
+        font-size: 68px;
+        line-height: 78px;
+    }
+    
+    h2{
+        font-size: 38px;
+        line-height: 44px;
+    }
+    
+    h3{
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    h4{
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    h5{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    h6,
+    p,
+    .button{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .list-menu{
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    
+}
+
+@media (max-width: 1280px) {
+    h1{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    
+    h2{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    h3{
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    h4{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    h6,
+    p,
+    .button{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    
+    h2{
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .button{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .list-menu {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    h6, p, h4{
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    h5 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .info-choice > ul > li h5{
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .info-choice > ul > li h6{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .price-choice_atv h2{
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .text-booking_stage h5,
+    .list-rules h5{
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    h5,
+    .info-choice > ul > li h6,
+    .question h6{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .wrapper-dop_choice_atv h4,
+    .text-booking_stage h6,
+    .info-certificates h5{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .section-rules > h5,
+    .modal > h4{
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
