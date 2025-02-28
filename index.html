@@ -120,6 +120,9 @@
                 <h1 id="home-title">ATV Rides</h1>
                 <h2 id="home-subtitle">in Pattaya City</h2>
                 <h3 id="home-price">30 minutes from 800฿</h3>
+                <button id="open_order_atv" class="button open_order_atv">
+                    Order
+                </button>
             </div>
         </div>
     </div>
@@ -199,8 +202,7 @@
                 <li>
                     <div class="text-booking_stage">
                         <h5 id="booking-step-1-title">Submit a request</h5>
-                        <h6 id="booking-step-1-desc">Call us </h6>
-                        <h6><a href="tel:+66660850723">+66 66-085-0723</a></h6>
+                        <h6 id="booking-step-1-desc">Call us <a href='tel:+66660850723'>+66 66-085-0723</a></h6>
                     </div>
                     <div class="img-booking_stage">
                         <picture>
@@ -260,6 +262,11 @@
                                 <h5 id="choice-1-price">Rider: ฿800 <span id='choice-1-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿1,200</span></h5>
                                 <h5 id="choice-1-passenger-price">Passenger: 400฿</h5>
                             </li>
+                            <li>
+                                <button id="open_order_atv_1" class="button open_order_atv">
+                                    Order
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -279,6 +286,11 @@
                                 <h5 id="choice-2-price-title">Selling Price:</h5>
                                 <h5 id="choice-2-price">Rider: ฿1,500 <span id='choice-2-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿2,200</span></h5>
                                 <h5 id="choice-2-passenger-price">Passenger: 700฿</h5>
+                            </li>
+                            <li>
+                                <button id="open_order_atv_2" class="button open_order_atv">
+                                    Order
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -309,6 +321,11 @@
                                 <h5 id="choice-3-price-title">Selling Price:</h5>
                                 <h5 id="choice-3-price">Rider: ฿2,500 <span style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿3,400</span></h5>
                                 <h5 id="choice-3-passenger-price">Passenger: ฿1,000</h5>
+                            </li>
+                            <li>
+                                <button id="open_order_atv_3" class="button open_order_atv">
+                                    Order
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -739,201 +756,227 @@
 </div>
 
 <script>
-    const translations = {
-        en: {
-            "location": "21 6 Pornprapanimit 34, Pattaya City, Bang Lamung District, Chon Buri 20150, Thailand",
-            "header-times_job": "Daily: <br> 9:00 AM to 5:00 PM",
-            "home-title": "ATV Rides",
-            "home-subtitle": "in Pattaya City",
-            "home-price": "30 minutes from 800฿",
-            "advantages-title": "WHY CHOOSE US",
-            "advantage-1-title": "Routes for everyone",
-            "advantage-1-desc": "walks along <br> extreme routes.",
-            "advantage-2-title": "Unforgettable impressions",
-            "advantage-2-desc": "picturesque landscapes, <br> drive and adrenaline.",
-            "advantage-3-title": "Safety first",
-            "advantage-3-desc": "modern equipment, serviceable ATVs <br> and experienced instructors.",
-            "advantage-4-title": "Individual approach",
-            "advantage-4-desc": "we select a route <br> for your level.",
-            "booking-title": "HOW TO BOOK AN ATV RIDE",
-            "booking-step-1-title": "Submit a request",
-            "booking-step-1-desc": "Call us",
-            "booking-step-2-title": "Booking",
-            "booking-step-2-desc": "Book a specific <br> day and time.",
-            "booking-step-3-title": "Enjoy",
-            "booking-step-3-desc": "Arrive 15 minutes <span>before</span>",
-            "booking-step-3-desc-2": "the start of the ride.",
-            "choice-title": "CHOOSE THE RIGHT RIDE PLAN",
-            "choice-1-duration": "Duration: 30 minutes",
-            "choice-1-capacity": "Capacity: 1 person",
-            "choice-1-price-title": "Selling Price:",
-            "choice-1-price": "Rider: ฿800 <span id='choice-1-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿1,200</span>",
-            "choice-1-old-price": "฿1,200",
-            "choice-1-passenger-price": "Passenger: 400฿",
-            "choice-2-duration": "Duration: 1 hour",
-            "choice-2-capacity": "Capacity: 2 people",
-            "choice-2-price-title": "Selling Price:",
-            "choice-2-price": "Rider: ฿1,500 <span id='choice-2-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿2,200</span>",
-            "choice-2-old-price": "฿2,200",
-            "choice-2-passenger-price": "Passenger: 700฿",
-            "choice-3-minimum": "Minimum of 3 people",
-            "choice-3-duration": "Duration: 2 hours",
-            "choice-3-included": "Included:",
-            "choice-3-included-1": "- English-speaking guide",
-            "choice-3-included-2": "- Snacks",
-            "choice-3-included-3": "- Cooling drinks",
-            "choice-3-included-4": "- Transfers to and from the hotel",
-            "choice-3-included-5": "- Insurance, provided by the operator",
-            "choice-3-included-6": "- Helmet",
-            "choice-3-included-7": "- Gloves",
-            "choice-3-price-title": "Selling Price:",
-            "choice-3-price": "Rider: ฿2,500 <span style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿3,400</span>",
-            "choice-3-old-price": "฿3,400",
-            "choice-3-passenger-price": "Passenger: ฿1,000",
-            "gallery-title": "PHOTOS AND VIDEOS",
-            "review-title": "CUSTOMER REVIEWS",
-            "faq-title": "FREQUENTLY ASKED QUESTIONS",
-            "faq-1-question": "At what age can you ride alone?",
-            "faq-1-answer": "From 16 years old.",
-            "faq-2-question": "Do you have protective gear?",
-            "faq-2-answer": "We provide a helmet and under-helmet, foot protection. This is included in the ride cost.",
-            "faq-3-question": "Can two people ride on one ATV?",
-            "faq-3-answer": "Yes.",
-            "faq-4-question": "Can women drive a large ATV?",
-            "faq-4-answer": "Yes, women can drive an ATV.",
-            "faq-5-question": "I have never ridden before, do I need to pay extra for training?",
-            "faq-5-answer": "No extra payment is required for training.",
-            "faq-6-question": "Is the ATV automatic or manual?",
-            "faq-6-answer": "The ATV has an automatic transmission, no need to shift gears.",
-            "faq-7-question": "What happens if the ATV breaks down from a fall or collision?",
-            "faq-7-answer": "It must be remembered that you must return the equipment to the rental point in good condition. Upon arrival at the base after the tour, our employee will inspect the equipment for breakdowns. In case of damage, you will have to pay for the broken part.",
-            "rules-title": "OUR <span>ATV RENTAL</span> REQUIRES COMPLIANCE WITH CERTAIN <span>CONDITIONS</span>, <br> RULES AND SAFETY TECHNIQUES.",
-            "rules-subtitle": "All of this is necessary so that you only have good impressions! Your surprise was successful, the equipment remained intact, and you would like to <br> come back to ride ATVs with us many more times.",
-            "rule-1": "The ATV ride participant agrees that the maximum speed will be limited to 40 km/h for safety reasons.",
-            "rule-2": "Only individuals aged 16 and above are allowed to ride adult ATVs.",
-            "rule-3": "Protective gear must be used during the ride.",
-            "rule-4": "ATV rides take place only in the presence of an instructor.",
-            "rule-5": "A briefing on ATV operation must be completed before use.",
-            "rule-6": "Do not participate in races or collisions that may cause damage to property and other participants.",
-            "prohibited-title": "PROHIBITED",
-            "prohibited-1": "Riding ATVs while intoxicated or under the influence of drugs.",
-            "prohibited-2": "Deliberately driving into obstacles.",
-            "prohibited-3": "Deliberately colliding with other ATVs.",
-            "prohibited-4": "Riding without the accompaniment of an instructor.",
-            "contacts-title": "CONTACTS",
-            "contacts-time": "Mon-Sun: 9.00 AM - 5.00 PM",
-            "contacts-location": "21 6 Pornprapanimit 34, Pattaya City, Bang Lamung District, Chon Buri 20150, Thailand",
-            "footer-location": "21 6 Pornprapanimit 34, Pattaya City, Bang Lamung District, Chon Buri 20150, Thailand",
-             "nav-photos-videos": "PHOTOS AND VIDEOS",
-            "nav-reviews": "REVIEWS",
-            "nav-faq": "FAQ",
-            "nav-contacts": "CONTACTS"
-        },
-        ru: {
-            "location": "21 6 Pornprapanimit 34, Паттайя Сити, Банг Ламунг Дистрикт, Чон Бури 20150, Таиланд",
-            "header-times_job": "Ежедневно: <br> с 9:00 до 17:00",
-            "home-title": "Прокат квадроциклов",
-            "home-subtitle": "в Паттайя Сити",
-            "home-price": "30 минут от 800฿",
-            "advantages-title": "ПОЧЕМУ ВЫБРАТЬ НАС",
-            "advantage-1-title": "Маршруты для всех",
-            "advantage-1-desc": "прогулки по <br> экстремальным маршрутам.",
-            "advantage-2-title": "Незабываемые впечатления",
-            "advantage-2-desc": "живописные пейзажи, <br> драйв и адреналин.",
-            "advantage-3-title": "Безопасность прежде всего",
-            "advantage-3-desc": "современное оборудование, исправные квадроциклы <br> и опытные инструкторы.",
-            "advantage-4-title": "Индивидуальный подход",
-            "advantage-4-desc": "мы подбираем маршрут <br> под ваш уровень.",
-            "booking-title": "КАК ЗАБРОНИРОВАТЬ ПРОКАТ КВАДРОЦИКЛА",
-            "booking-step-1-title": "Отправьте заявку",
-            "booking-step-1-desc": "Позвоните нам",
-            "booking-step-2-title": "Бронирование",
-            "booking-step-2-desc": "Забронируйте конкретный <br> день и время.",
-            "booking-step-3-title": "Наслаждайтесь",
-            "booking-step-3-desc": "Прибывайте за 15 минут <span>до</span>",
-            "booking-step-3-desc-2": "начала поездки.",
-            "choice-title": "ВЫБЕРИТЕ ПОДХОДЯЩИЙ ПЛАН ПОЕЗДКИ",
-            "choice-1-duration": "Продолжительность: 30 минут",
-            "choice-1-capacity": "Вместимость: 1 человек",
-            "choice-1-price-title": "Цена:",
-            "choice-1-price": "Водитель: ฿800 <span id='choice-1-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿1,200</span>",
-            "choice-1-old-price": "฿1,200",
-            "choice-1-passenger-price": "Пассажир: 400฿",
-            "choice-2-duration": "Продолжительность: 1 час",
-            "choice-2-capacity": "Вместимость: 2 человека",
-            "choice-2-price-title": "Цена:",
-            "choice-2-price": "Водитель: ฿1,500 <span id='choice-2-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿2,200</span>",
-            "choice-2-old-price": "฿2,200",
-            "choice-2-passenger-price": "Пассажир: 700฿",
-            "choice-3-minimum": "Минимум 3 человека",
-            "choice-3-duration": "Продолжительность: 2 часа",
-            "choice-3-included": "Включено:",
-            "choice-3-included-1": "- Русскоговорящий гид",
-            "choice-3-included-2": "- Закуски",
-            "choice-3-included-3": "- Прохладительные напитки",
-            "choice-3-included-4": "- Трансферы до и от отеля",
-            "choice-3-included-5": "- Страховка, предоставляемая оператором",
-            "choice-3-included-6": "- Шлем",
-            "choice-3-included-7": "- Перчатки",
-            "choice-3-price-title": "Цена:",
-            "choice-3-price": "Водитель: ฿2,500 <span style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿3,400</span>",
-            "choice-3-old-price": "฿3,400",
-            "choice-3-passenger-price": "Пассажир: ฿1,000",
-            "gallery-title": "ФОТО И ВИДЕО",
-            "review-title": "ОТЗЫВЫ КЛИЕНТОВ",
-            "faq-title": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
-            "faq-1-question": "С какого возраста можно кататься самостоятельно?",
-            "faq-1-answer": "С 16 лет.",
-            "faq-2-question": "Есть ли защитное снаряжение?",
-            "faq-2-answer": "Мы предоставляем шлем и подшлемник, защиту для ног. Это включено в стоимость поездки.",
-            "faq-3-question": "Могут ли два человека ехать на одном квадроцикле?",
-            "faq-3-answer": "Да.",
-            "faq-4-question": "Могут ли женщины управлять большим квадроциклом?",
-            "faq-4-answer": "Да, женщины могут управлять квадроциклом.",
-            "faq-5-question": "Я никогда не катался раньше, нужно ли доплачивать за обучение?",
-            "faq-5-answer": "Нет, дополнительная плата за обучение не требуется.",
-            "faq-6-question": "Квадроцикл автоматический или механический?",
-            "faq-6-answer": "Квадроцикл имеет автоматическую трансмиссию, не нужно переключать передачи.",
-            "faq-7-question": "Что делать, если квадроцикл сломается из-за падения или столкновения?",
-            "faq-7-answer": "Нужно помнить, что оборудование необходимо вернуть в пункт проката в исправном состоянии. По прибытии на базу после тура наш сотрудник проверит оборудование на наличие поломок. В случае повреждения, вам придется оплатить сломанную часть.",
-            "rules-title": "НАШ <span>ПРОКАТ КВАДРОЦИКЛОВ</span> ТРЕБУЕТ СОБЛЮДЕНИЯ ОПРЕДЕЛЕННЫХ <span>УСЛОВИЙ</span>, <br> ПРАВИЛ И ТЕХНИКИ БЕЗОПАСНОСТИ.",
-            "rules-subtitle": "Все это необходимо для того, чтобы у вас остались только хорошие впечатления! Ваш сюрприз прошел успешно, оборудование осталось целым, и вы захотите вернуться к нам на прокат квадроциклов еще много раз.",
-            "rule-1": "Участник поездки на квадроцикле соглашается, что максимальная скорость будет ограничена 40 км/ч по соображениям безопасности.",
-            "rule-2": "Кататься на взрослых квадроциклах разрешено только лицам старше 16 лет.",
-            "rule-3": "Во время поездки необходимо использовать защитное снаряжение.",
-            "rule-4": "Поездки на квадроциклах проводятся только в присутствии инструктора.",
-            "rule-5": "Перед использованием необходимо пройти инструктаж по управлению квадроциклом.",
-            "rule-6": "Не участвуйте в гонках или столкновениях, которые могут привести к повреждению имущества и других участников.",
-            "prohibited-title": "ЗАПРЕЩЕНО",
-            "prohibited-1": "Кататься на квадроциклах в состоянии алкогольного или наркотического опьянения.",
-            "prohibited-2": "Намеренно врезаться в препятствия.",
-            "prohibited-3": "Намеренно сталкиваться с другими квадроциклами.",
-            "prohibited-4": "Кататься без сопровождения инструктора.",
-            "contacts-title": "КОНТАКТЫ",
-            "contacts-time": "Пн-Вс: с 9.00 до 17.00",
-            "contacts-location": "21 6 Pornprapanimit 34, Паттайя Сити, Банг Ламунг Дистрикт, Чон Бури 20150, Таиланд",
-            "footer-location": "21 6 Pornprapanimit 34, Паттайя Сити, Банг Ламунг Дистрикт, Чон Бури 20150, Таиланд",
-            "nav-photos-videos": "ФОТО И ВИДЕО",
-            "nav-reviews": "ОТЗЫВЫ",
-            "nav-faq": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
-            "nav-contacts": "КОНТАКТЫ"
-        }
-    };
+    var button = document.getElementById('open_order_atv');
+    var chosebtn1 = document.getElementById('open_order_atv_1');
+    var chosebtn2 = document.getElementById('open_order_atv_2');
+    var chosebtn3 = document.getElementById('open_order_atv_3');
+    button.addEventListener('click', function() {
+       window.open('https://www.klook.com/en-US/activity/35518-atv-half-day-adventure-pattaya/', '_blank');
+    });
+    chosebtn1.addEventListener('click', function() {
+       window.open('https://www.klook.com/en-US/activity/35518-atv-half-day-adventure-pattaya/', '_blank');
+    });
+    chosebtn2.addEventListener('click', function() {
+       window.open('https://www.klook.com/en-US/activity/35518-atv-half-day-adventure-pattaya/', '_blank');
+    });
+    chosebtn3.addEventListener('click', function() {
+       window.open('https://www.klook.com/en-US/activity/35518-atv-half-day-adventure-pattaya/', '_blank');
+    });
 
-    function toggleLanguage() {
-        const lang = document.documentElement.lang === 'en' ? 'ru' : 'en';
-        document.documentElement.lang = lang;
-        document.getElementById('lang').textContent = lang === 'en' ? 'RU' : 'EN';
 
-        for (const [key, value] of Object.entries(translations[lang])) {
-            const element = document.getElementById(key);
-            if (element) {
-                element.innerHTML = value;
-            }
-        }
-    }
+   const translations = {
+       en: {
+           "open_order_atv": "Order",
+           "open_order_atv_1": "Order",
+           "open_order_atv_2": "Order",
+           "open_order_atv_3": "Order",
+           "location": "<h6>21 6 Pornprapanimit 34, Pattaya City, Bang Lamung District, Chon Buri 20150, Thailand</h6>",
+           "header-times_job": "<h6>Daily: <br> 9:00 AM to 5:00 PM</h6>",
+           "home-title": "ATV Rides",
+           "home-subtitle": "in Pattaya City",
+           "home-price": "30 minutes from 800฿",
+           "advantages-title": "WHY CHOOSE US",
+           "advantage-1-title": "Routes for everyone",
+           "advantage-1-desc": "walks along <br> extreme routes.",
+           "advantage-2-title": "Unforgettable impressions",
+           "advantage-2-desc": "picturesque landscapes, <br> drive and adrenaline.",
+           "advantage-3-title": "Safety first",
+           "advantage-3-desc": "modern equipment, serviceable ATVs <br> and experienced instructors.",
+           "advantage-4-title": "Individual approach",
+           "advantage-4-desc": "we select a route <br> for your level.",
+           "booking-title": "HOW TO BOOK AN ATV RIDE",
+           "booking-step-1-title": "Submit a request",
+           "booking-step-1-desc": "Call us <a href='tel:+66660850723'>+66 66-085-0723</a>",
+           "booking-step-2-title": "Booking",
+           "booking-step-2-desc": "Book a specific <br> day and time.",
+           "booking-step-3-title": "Enjoy",
+           "booking-step-3-desc": "Arrive 15 minutes <span>before</span>",
+           "booking-step-3-desc-2": "the start of the ride.",
+           "choice-title": "CHOOSE THE RIGHT RIDE PLAN",
+           "choice-1-duration": "Duration: 30 minutes",
+           "choice-1-capacity": "Capacity: 1 person",
+           "choice-1-price-title": "Selling Price:",
+           "choice-1-price": "Rider: ฿800 <span id='choice-1-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿1,200</span>",
+           "choice-1-old-price": "฿1,200",
+           "choice-1-passenger-price": "Passenger: 400฿",
+           "choice-2-duration": "Duration: 1 hour",
+           "choice-2-capacity": "Capacity: 2 people",
+           "choice-2-price-title": "Selling Price:",
+           "choice-2-price": "Rider: ฿1,500 <span id='choice-2-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿2,200</span>",
+           "choice-2-old-price": "฿2,200",
+           "choice-2-passenger-price": "Passenger: 700฿",
+           "choice-3-minimum": "Minimum of 3 people",
+           "choice-3-duration": "Duration: 2 hours",
+           "choice-3-included": "Included:",
+           "choice-3-included-1": "- English-speaking guide",
+           "choice-3-included-2": "- Snacks",
+           "choice-3-included-3": "- Cooling drinks",
+           "choice-3-included-4": "- Transfers to and from the hotel",
+           "choice-3-included-5": "- Insurance, provided by the operator",
+           "choice-3-included-6": "- Helmet",
+           "choice-3-included-7": "- Gloves",
+           "choice-3-price-title": "Selling Price:",
+           "choice-3-price": "Rider: ฿2,500 <span style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿3,400</span>",
+           "choice-3-old-price": "฿3,400",
+           "choice-3-passenger-price": "Passenger: ฿1,000",
+           "gallery-title": "PHOTOS AND VIDEOS",
+           "review-title": "CUSTOMER REVIEWS",
+           "faq-title": "FREQUENTLY ASKED QUESTIONS",
+           "faq-1-question": "At what age can you ride alone?",
+           "faq-1-answer": "From 16 years old.",
+           "faq-2-question": "Do you have protective gear?",
+           "faq-2-answer": "We provide a helmet and under-helmet, foot protection. This is included in the ride cost.",
+           "faq-3-question": "Can two people ride on one ATV?",
+           "faq-3-answer": "Yes.",
+           "faq-4-question": "Can women drive a large ATV?",
+           "faq-4-answer": "Yes, women can drive an ATV.",
+           "faq-5-question": "I have never ridden before, do I need to pay extra for training?",
+           "faq-5-answer": "No extra payment is required for training.",
+           "faq-6-question": "Is the ATV automatic or manual?",
+           "faq-6-answer": "The ATV has an automatic transmission, no need to shift gears.",
+           "faq-7-question": "What happens if the ATV breaks down from a fall or collision?",
+           "faq-7-answer": "It must be remembered that you must return the equipment to the rental point in good condition. Upon arrival at the base after the tour, our employee will inspect the equipment for breakdowns. In case of damage, you will have to pay for the broken part.",
+           "rules-title": "OUR <span>ATV RENTAL</span> REQUIRES COMPLIANCE WITH CERTAIN <span>CONDITIONS</span>, <br> RULES AND SAFETY TECHNIQUES.",
+           "rules-subtitle": "All of this is necessary so that you only have good impressions! Your surprise was successful, the equipment remained intact, and you would like to <br> come back to ride ATVs with us many more times.",
+           "rule-1": "The ATV ride participant agrees that the maximum speed will be limited to 40 km/h for safety reasons.",
+           "rule-2": "Only individuals aged 16 and above are allowed to ride adult ATVs.",
+           "rule-3": "Protective gear must be used during the ride.",
+           "rule-4": "ATV rides take place only in the presence of an instructor.",
+           "rule-5": "A briefing on ATV operation must be completed before use.",
+           "rule-6": "Do not participate in races or collisions that may cause damage to property and other participants.",
+           "prohibited-title": "PROHIBITED",
+           "prohibited-1": "Riding ATVs while intoxicated or under the influence of drugs.",
+           "prohibited-2": "Deliberately driving into obstacles.",
+           "prohibited-3": "Deliberately colliding with other ATVs.",
+           "prohibited-4": "Riding without the accompaniment of an instructor.",
+           "contacts-title": "CONTACTS",
+           "contacts-time": "Mon-Sun: 9.00 AM - 5.00 PM",
+           "contacts-location": "21 6 Pornprapanimit 34, Pattaya City, Bang Lamung District, Chon Buri 20150, Thailand",
+           "footer-location": "21 6 Pornprapanimit 34, Pattaya City, Bang Lamung District, Chon Buri 20150, Thailand",
+            "nav-photos-videos": "PHOTOS AND VIDEOS",
+           "nav-reviews": "REVIEWS",
+           "nav-faq": "FAQ",
+           "nav-contacts": "CONTACTS"
+       },
+       ru: {
+           "open_order_atv": "Заказать",
+           "open_order_atv_1": "Заказать",
+           "open_order_atv_2": "Заказать",
+           "open_order_atv_3": "Заказать",
+           "location": "<h6>21 6 Pornprapanimit 34, Паттайя Сити, Банг Ламунг Дистрикт, Чон Бури 20150, Таиланд</h6>",
+           "header-times_job": "<h6>Ежедневно: <br> с 9:00 до 17:00</h6>",
+           "home-title": "Прокат квадроциклов",
+           "home-subtitle": "в Паттайя Сити",
+           "home-price": "30 минут от 800฿",
+           "advantages-title": "ПОЧЕМУ ВЫБИРАЮТ НАС",
+           "advantage-1-title": "Маршруты для всех",
+           "advantage-1-desc": "прогулки по <br> экстремальным маршрутам.",
+           "advantage-2-title": "Незабываемые впечатления",
+           "advantage-2-desc": "живописные пейзажи, <br> драйв и адреналин.",
+           "advantage-3-title": "Безопасность прежде всего",
+           "advantage-3-desc": "современное оборудование, исправные квадроциклы <br> и опытные инструкторы.",
+           "advantage-4-title": "Индивидуальный подход",
+           "advantage-4-desc": "мы подбираем маршрут <br> под ваш уровень.",
+           "booking-title": "КАК ЗАБРОНИРОВАТЬ ПРОКАТ КВАДРОЦИКЛА",
+           "booking-step-1-title": "Отправьте заявку",
+           "booking-step-1-desc": "Позвоните нам <a href='tel:+66660850723'>+66 66-085-0723</a>",
+           "booking-step-2-title": "Бронирование",
+           "booking-step-2-desc": "Забронируйте конкретный <br> день и время.",
+           "booking-step-3-title": "Наслаждайтесь",
+           "booking-step-3-desc": "Прибывайте за 15 минут <span>до</span>",
+           "booking-step-3-desc-2": "начала поездки.",
+           "choice-title": "ВЫБЕРИТЕ ПОДХОДЯЩИЙ ПЛАН ПОЕЗДКИ",
+           "choice-1-duration": "Продолжительность: 30 минут",
+           "choice-1-capacity": "Вместимость: 1 человек",
+           "choice-1-price-title": "Цена:",
+           "choice-1-price": "Водитель: ฿800 <span id='choice-1-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿1,200</span>",
+           "choice-1-old-price": "฿1,200",
+           "choice-1-passenger-price": "Пассажир: 400฿",
+           "choice-2-duration": "Продолжительность: 1 час",
+           "choice-2-capacity": "Вместимость: 2 человека",
+           "choice-2-price-title": "Цена:",
+           "choice-2-price": "Водитель: ฿1,500 <span id='choice-2-old-price' style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿2,200</span>",
+           "choice-2-old-price": "฿2,200",
+           "choice-2-passenger-price": "Пассажир: 700฿",
+           "choice-3-minimum": "Минимум 3 человека",
+           "choice-3-duration": "Продолжительность: 2 часа",
+           "choice-3-included": "Включено:",
+           "choice-3-included-1": "- Русскоговорящий гид",
+           "choice-3-included-2": "- Закуски",
+           "choice-3-included-3": "- Прохладительные напитки",
+           "choice-3-included-4": "- Трансферы до и от отеля",
+           "choice-3-included-5": "- Страховка, предоставляемая оператором",
+           "choice-3-included-6": "- Шлем",
+           "choice-3-included-7": "- Перчатки",
+           "choice-3-price-title": "Цена:",
+           "choice-3-price": "Водитель: ฿2,500 <span style='font-size: 0.6em; color: gray; text-decoration: line-through;'>฿3,400</span>",
+           "choice-3-old-price": "฿3,400",
+           "choice-3-passenger-price": "Пассажир: ฿1,000",
+           "gallery-title": "ФОТО И ВИДЕО",
+           "review-title": "ОТЗЫВЫ КЛИЕНТОВ",
+           "faq-title": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+           "faq-1-question": "С какого возраста можно кататься самостоятельно?",
+           "faq-1-answer": "С 16 лет.",
+           "faq-2-question": "Есть ли защитное снаряжение?",
+           "faq-2-answer": "Мы предоставляем шлем и подшлемник, защиту для ног. Это включено в стоимость поездки.",
+           "faq-3-question": "Могут ли два человека ехать на одном квадроцикле?",
+           "faq-3-answer": "Да.",
+           "faq-4-question": "Могут ли женщины управлять большим квадроциклом?",
+           "faq-4-answer": "Да, женщины могут управлять квадроциклом.",
+           "faq-5-question": "Я никогда не катался раньше, нужно ли доплачивать за обучение?",
+           "faq-5-answer": "Нет, дополнительная плата за обучение не требуется.",
+           "faq-6-question": "Квадроцикл автоматический или механический?",
+           "faq-6-answer": "Квадроцикл имеет автоматическую трансмиссию, не нужно переключать передачи.",
+           "faq-7-question": "Что делать, если квадроцикл сломается из-за падения или столкновения?",
+           "faq-7-answer": "Нужно помнить, что оборудование необходимо вернуть в пункт проката в исправном состоянии. По прибытии на базу после тура наш сотрудник проверит оборудование на наличие поломок. В случае повреждения, вам придется оплатить сломанную часть.",
+           "rules-title": "НАШ <span>ПРОКАТ КВАДРОЦИКЛОВ</span> ТРЕБУЕТ СОБЛЮДЕНИЯ ОПРЕДЕЛЕННЫХ <span>УСЛОВИЙ</span>, <br> ПРАВИЛ И ТЕХНИКИ БЕЗОПАСНОСТИ.",
+           "rules-subtitle": "Все это необходимо для того, чтобы у вас остались только хорошие впечатления! Ваш сюрприз прошел успешно, оборудование осталось целым, и вы захотите вернуться к нам на прокат квадроциклов еще много раз.",
+           "rule-1": "Участник поездки на квадроцикле соглашается, что максимальная скорость будет ограничена 40 км/ч по соображениям безопасности.",
+           "rule-2": "Кататься на взрослых квадроциклах разрешено только лицам старше 16 лет.",
+           "rule-3": "Во время поездки необходимо использовать защитное снаряжение.",
+           "rule-4": "Поездки на квадроциклах проводятся только в присутствии инструктора.",
+           "rule-5": "Перед использованием необходимо пройти инструктаж по управлению квадроциклом.",
+           "rule-6": "Не участвуйте в гонках или столкновениях, которые могут привести к повреждению имущества и других участников.",
+           "prohibited-title": "ЗАПРЕЩЕНО",
+           "prohibited-1": "Кататься на квадроциклах в состоянии алкогольного или наркотического опьянения.",
+           "prohibited-2": "Намеренно врезаться в препятствия.",
+           "prohibited-3": "Намеренно сталкиваться с другими квадроциклами.",
+           "prohibited-4": "Кататься без сопровождения инструктора.",
+           "contacts-title": "КОНТАКТЫ",
+           "contacts-time": "Пн-Вс: с 9.00 до 17.00",
+           "contacts-location": "21 6 Pornprapanimit 34, Паттайя Сити, Банг Ламунг Дистрикт, Чон Бури 20150, Таиланд",
+           "footer-location": "21 6 Pornprapanimit 34, Паттайя Сити, Банг Ламунг Дистрикт, Чон Бури 20150, Таиланд",
+           "nav-photos-videos": "ФОТО И ВИДЕО",
+           "nav-reviews": "ОТЗЫВЫ",
+           "nav-faq": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+           "nav-contacts": "КОНТАКТЫ"
+       }
+   };
 
-    document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
+   function toggleLanguage() {
+       const lang = document.documentElement.lang === 'en' ? 'ru' : 'en';
+       document.documentElement.lang = lang;
+       document.getElementById('lang').textContent = lang === 'en' ? 'RU' : 'EN';
+
+       for (const [key, value] of Object.entries(translations[lang])) {
+           const element = document.getElementById(key);
+           if (element) {
+               element.innerHTML = value;
+           }
+       }
+   }
+
+   document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
 </script>
 </body>
 
